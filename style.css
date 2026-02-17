@@ -1,0 +1,231 @@
+/* style.css */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+}
+
+.container {
+    max-width: 800px;
+    width: 100%;
+    background-color: rgba(255, 255, 255, 0.95);
+    border-radius: 20px;
+    box-shadow: 0 20px 60px rgba(0, 0, 0, 0.3);
+    padding: 40px;
+    text-align: center;
+    transition: transform 0.3s ease;
+}
+
+.container:hover {
+    transform: translateY(-5px);
+}
+
+h1 {
+    font-size: 2.5em;
+    color: #333;
+    margin-bottom: 20px;
+    font-weight: 600;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    background: linear-gradient(45deg, #667eea, #764ba2);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+}
+
+.quote-container {
+    min-height: 150px;
+    margin: 30px 0;
+    padding: 20px;
+    border-left: 5px solid #667eea;
+    border-right: 5px solid #764ba2;
+    border-radius: 10px;
+    background-color: #f8f9fa;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#quote {
+    font-size: 1.3em;
+    line-height: 1.6;
+    color: #555;
+    font-style: italic;
+    transition: opacity 0.5s ease;
+    word-wrap: break-word;
+}
+
+#quote::before {
+    content: '"';
+    font-size: 2em;
+    color: #667eea;
+    margin-right: 5px;
+}
+
+#quote::after {
+    content: '"';
+    font-size: 2em;
+    color: #764ba2;
+    margin-left: 5px;
+}
+
+.quote-author {
+    font-size: 0.9em;
+    color: #888;
+    margin-top: 10px;
+    font-weight: 500;
+}
+
+.button-container {
+    display: flex;
+    gap: 15px;
+    justify-content: center;
+    margin-top: 30px;
+}
+
+button {
+    background: linear-gradient(45deg, #667eea, #764ba2);
+    color: white;
+    border: none;
+    padding: 15px 30px;
+    font-size: 1.1em;
+    font-weight: 600;
+    border-radius: 50px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    box-shadow: 0 5px 15px rgba(102, 126, 234, 0.4);
+    flex: 1;
+    max-width: 250px;
+}
+
+button:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 8px 25px rgba(102, 126, 234, 0.6);
+}
+
+button:active {
+    transform: translateY(0);
+    box-shadow: 0 3px 10px rgba(102, 126, 234, 0.4);
+}
+
+button:focus {
+    outline: none;
+    box-shadow: 0 0 0 3px rgba(102, 126, 234, 0.3);
+}
+
+#copy-button {
+    background: linear-gradient(45deg, #4a90e2, #2c3e50);
+    box-shadow: 0 5px 15px rgba(74, 144, 226, 0.4);
+}
+
+#copy-button:hover {
+    box-shadow: 0 8px 25px rgba(74, 144, 226, 0.6);
+}
+
+.tweet-button {
+    background: linear-gradient(45deg, #1DA1F2, #0d8ecf);
+    box-shadow: 0 5px 15px rgba(29, 161, 242, 0.4);
+    text-decoration: none;
+    display: inline-block;
+    line-height: normal;
+}
+
+.tweet-button:hover {
+    box-shadow: 0 8px 25px rgba(29, 161, 242, 0.6);
+}
+
+.button-group {
+    display: flex;
+    gap: 15px;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.footer {
+    margin-top: 30px;
+    color: rgba(255, 255, 255, 0.8);
+    font-size: 0.9em;
+}
+
+.footer a {
+    color: white;
+    text-decoration: none;
+    font-weight: 600;
+}
+
+.footer a:hover {
+    text-decoration: underline;
+}
+
+/* Animation for quote change */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(10px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.quote-container.fade-in {
+    animation: fadeIn 0.5s ease forwards;
+}
+
+/* Responsive design */
+@media (max-width: 768px) {
+    .container {
+        padding: 25px;
+    }
+    
+    h1 {
+        font-size: 2em;
+    }
+    
+    #quote {
+        font-size: 1.1em;
+    }
+    
+    .button-group {
+        flex-direction: column;
+        align-items: center;
+    }
+    
+    button {
+        width: 100%;
+        max-width: none;
+    }
+}
+
+@media (max-width: 480px) {
+    .container {
+        padding: 20px;
+    }
+    
+    h1 {
+        font-size: 1.6em;
+    }
+    
+    #quote {
+        font-size: 1em;
+    }
+    
+    .quote-container {
+        padding: 15px;
+    }
+}
