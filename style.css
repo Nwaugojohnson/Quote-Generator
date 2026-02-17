@@ -112,34 +112,6 @@ button {
     max-width: 250px;
 }
 
-button:active {
-    transform: translateY(0);
-    box-shadow: 0 3px 10px rgba(102, 126, 234, 0.4);
-}
-
-button:focus {
-    outline: none;
-    box-shadow: 0 0 0 3px rgba(102, 126, 234, 0.3);
-}
-
-#copy-button {
-    background: linear-gradient(45deg, #4a90e2, #2c3e50);
-    box-shadow: 0 5px 15px rgba(74, 144, 226, 0.4);
-}
-
-#copy-button:hover {
-    box-shadow: 0 8px 25px rgba(74, 144, 226, 0.6);
-}
-
-.tweet-button {
-    background: linear-gradient(45deg, #1DA1F2, #0d8ecf);
-    box-shadow: 0 5px 15px rgba(29, 161, 242, 0.4);
-    text-decoration: none;
-    display: inline-block;
-    line-height: normal;
-}
-
-
 .button-group {
     display: flex;
     gap: 15px;
